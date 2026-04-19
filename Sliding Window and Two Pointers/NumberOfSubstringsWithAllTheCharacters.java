@@ -12,8 +12,28 @@ public class NumberOfSubstringsWithAllTheCharacters {
         }
         return count;
     }
+    public static int Optimal(String s) {
+        int count = 0;
+        int l = 0;
+        int r = 0;
+        int n = s.length();
+        int freq[] = new int[3];
+        
+        while(r<n) {
+            freq[s.charAt(r) - 'a']++;
+            while(freq[0] > 0 && freq[1] > 0 && freq[2] > 0) {
+                count = count + (s.length() - r);
+
+                freq[s.charAt(l) - 'a']--;
+                l++;
+            }
+            r++;
+        }
+        return count;
+    }
     public static void main (String args[]) {
         String s = "abcabc";
         System.out.println(Brute(s));
+        System.out.println(Optimal(s));
     }
 }
