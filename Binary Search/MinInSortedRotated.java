@@ -8,7 +8,7 @@ public class MinInSortedRotated {
             if(arr[mid] > arr[high]){
                 low = mid + 1;
             }else{
-                high = mid - 1;
+                high = mid;
             }
         }
         return arr[low];
