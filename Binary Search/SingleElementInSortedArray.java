@@ -55,6 +55,5 @@ public class SingleElementInSortedArray {
         System.out.println("Brute:   " + SolutionBrute(arr));
         System.out.println("Brute:   " + SolutionBrute(arr));
         System.out.println("Optimal: " + SolutionOptimal(arr));
-        System.out.println("Optimal: " + SolutionOptimal(arr));
     }
 }
